@@ -1,0 +1,331 @@
+body {
+  background: #141414;
+  color: #fff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.cinema-navbar {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  padding: 0 40px;
+  height: 64px;
+  border-bottom: 2px solid #e50914;
+}
+.cinema-logo {
+  font-size: 2rem;
+  color: #e50914;
+  margin-right: 16px;
+}
+.cinema-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 32px;
+}
+.cinema-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cinema-menu li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.cinema-menu li.active {
+  color: #e50914;
+  border-bottom: 2px solid #e50914;
+}
+.cinema-menu li:hover {
+  color: #e50914;
+}
+
+.cinema-hero {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #181818 60%, rgba(20,20,20,0.7) 100%);
+  padding: 40px 60px 20px 60px;
+  min-height: 340px;
+  position: relative;
+}
+.hero-poster {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+  margin-right: 40px;
+}
+.hero-content {
+  flex: 1;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.hero-desc {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #ccc;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+.hero-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.hero-btn.secondary {
+  background: #333;
+  color: #fff;
+}
+.hero-btn:hover {
+  background: #b0060f;
+}
+
+.movie-form {
+  display: flex;
+  gap: 12px;
+  padding: 24px 60px;
+  background: #181818;
+  border-radius: 8px;
+  margin: 24px auto 0 auto;
+  max-width: 900px;
+}
+.movie-form input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+.movie-form button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.movie-form button:hover {
+  background: #b0060f;
+}
+
+.carousel-section {
+  margin: 36px 0 0 0;
+  padding: 0 60px;
+}
+.carousel-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+.carousel-card {
+  background: #181818;
+  border-radius: 10px;
+  min-width: 180px;
+  max-width: 180px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 16px 0;
+  transition: transform 0.2s;
+}
+.carousel-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 32px rgba(229,9,20,0.2);
+}
+.carousel-poster {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.carousel-card-content {
+  text-align: center;
+}
+.carousel-card-content h4 {
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  color: #fff;
+}
+.carousel-card-content p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0 0 8px 0;
+}
+.card-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.card-actions button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-actions button:hover {
+  background: #b0060f;
+}
+
+@media (max-width: 900px) {
+  .cinema-navbar, .cinema-hero, .movie-form, .carousel-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero-poster {
+    width: 160px;
+    height: 220px;
+    margin-right: 16px;
+  }
+  .carousel-card, .carousel-poster {
+    min-width: 120px;
+    max-width: 120px;
+    width: 100px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cinema-navbar, .cinema-hero, .movie-form, .carousel-section {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  .carousel-card, .carousel-poster {
+    min-width: 90px;
+    max-width: 90px;
+    width: 80px;
+    height: 120px;
+  }
+  .carousel-title {
+    font-size: 1rem;
+  }
+  .card-actions button {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  .hero-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.movie-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+  background: #232323;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.movie-form input {
+  background: #181818;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.movie-form button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+.movie-form button:hover {
+  background: #b0060f;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.movie-card {
+  background: #232323;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s;
+}
+.movie-card:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+.movie-card h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.movie-card p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+.card-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+.card-actions button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-actions button:hover {
+  background: #b0060f;
+}
